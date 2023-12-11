@@ -1,5 +1,7 @@
 # secure_and_endure
 
+Infographics UX PWA Typescript Svelte ThreeJS Vue ✨ htmx
+
 ---
 #
 [Portfolio Blog](https://www.theScottKrause.com) |

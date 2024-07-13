@@ -75,6 +75,7 @@ document.addEventListener("contextmenu", ( ev ) => {
     //}
 }, false )
 document.addEventListener("click", ( ev ) => {
+    ev.preventDefault()
     if( !neodigmSodaPop.isOpen() ) contact_form_iframe_sfdc.openCTA()
 }, false )
 </script>

@@ -74,11 +74,8 @@ document.addEventListener("contextmenu", ( ev ) => {
         if( neodigmToast ) neodigmToast.q("Can you keep a|Secret?", "brand")
     //}
 }, false )
-document.addEventListener("click", ( ev ) => {
-    ev.preventDefault()
-    setTimeout(()=>{
-        if( !neodigmSodaPop.isOpen() ) contact_form_iframe_sfdc.openCTA()            
-    }, 1e3)
+document.querySelectorAll(".hero__img")[0].addEventListener("click", ( ev ) => {
+    contact_form_iframe_sfdc.openCTA()            
 }, false )
 </script>
     </body>

@@ -22,7 +22,11 @@
     <body data-n55-ampm-theme="light">
 
         <neodigm-widget data-n55-widget-config="{conf:'', ampm:'',mobile:''}" data-n55-widget-id="effect_3d_spheres"></neodigm-widget>
-        <img class="hero__img" src="img/a55_members_only_600.png" alt="Secure and Endure">
+        <section class="hero__cont">
+            <img class="" src="img/a55_members_only_600.png" alt="Secure and Endure">
+            <aside class="blob blob1"></aside>
+            <aside class="blob blob2"></aside>
+        </section>
         <template style="text-align: center;">
             <br>
             <h1 class="h-one">Arcanus 55</h1>
@@ -36,9 +40,8 @@
         <style>
             /*  Overrides */
             neodigm-sodapop{ background-color: #333; }
-
             body {background-color: #222222; margin: 0; padding: 0;}
-            .hero__img {
+            .hero__cont {
                 width: 400px; height: auto;
                 position: absolute; display: block;
                 top: calc( 50vh - 200px);
@@ -46,30 +49,47 @@
                 left: calc( 50vw - 200px);
                 user-select: none;
             }
-            .h-one {
-                font-family: 'Cinzel Decorative', cursive;
-                color: #edba08;
-                font-size: 76px;
+            .hero__cont IMG{
+                position: relative;
+                width: 100%;
+                z-index: 256;
             }
-            .h-two {
-                font-family: 'Cinzel Decorative', cursive;
-                color: #fff;
-                font-size: 32px;
+            .blob {
+                position: absolute;
+                border-radius: 100%;
+                width: 256px; height: 256px;
+                opacity: .32;
+                filter: blur( 12px );
+                transition: all 2s;
             }
-            .h-three {
-                font-family: 'Roboto', 'Roboto Condensed', sans-serif; font-weight: 100;
-                margin: 6px 0; padding: 1px;
-                color: #fff;
-                font-size: 22px;
+            .blob1 {
+                position: absolute;
+                background-color: #EDBA08;
+                top: 44px; right: 44px;
+                z-index: 248;
             }
-            .h-four {
-                font-family: 'Roboto', 'Roboto Condensed', sans-serif; font-weight: 100;
-                margin: 6px 0; padding: 1px;
-                color: #fff;
-                font-size: 18px;
+            .blob2 {
+                position: absolute;
+                background-color: #DD4124;
+                top: 44px; right: 44px;
+                z-index: 249;
+            }
+            .blob3 {
+                position: absolute;
+                background-color: #000000;
+                right: 1px; bottom: 1px;
+                z-index: 250;
             }
         </style>
 <script>
+setInterval( ()=>{
+    Array.from( document.querySelectorAll(".blob")).forEach( (el)=>{
+        if( neodigmUtils.f1210() >= 2 ){
+            el.style.top = neodigmUtils.f02x(250) - 44 + "px"
+            el.style.right = neodigmUtils.f02x(250) - 44 + "px"
+        }
+    })
+}, 3e3)
 const contact_form_iframe_sfdcCustom = {"contact_cta_theme": ["danger"],"contact_cta_oid": ["00D6A000002intt"]}
 document.addEventListener("contextmenu", ( ev ) => {
     //if( !DebTog ){
@@ -77,13 +97,9 @@ document.addEventListener("contextmenu", ( ev ) => {
         if( neodigmToast ) neodigmToast.q("Can you keep a|Secret?", "brand")
     //}
 }, false )
-document.querySelectorAll(".hero__img")[0].addEventListener("click", ( ev ) => {
+document.querySelectorAll(".hero__cont")[0].addEventListener("click", ( ev ) => {
     contact_form_iframe_sfdc.openCTA()            
 }, false )
 </script>
     </body>
 </html>
-
-
-
-

@@ -28,6 +28,7 @@
                 <aside class="blob blob1"></aside>
                 <aside class="blob blob2"></aside>
                 <aside class="blob blob3"></aside>
+                <aside class="blob blob4"></aside>
             </div>
         </section>
         <template style="text-align: center;">
@@ -48,8 +49,8 @@
                 width: 400px; height: auto;
                 position: absolute; display: block;
                 top: calc( 50vh - 200px);
-                margin: 8px;
                 left: calc( 50vw - 200px);
+                margin: 8px;
                 user-select: none;
             }
             .hero__cont IMG{
@@ -62,7 +63,7 @@
                 transform: rotate(40deg);
                 width: 100%; height: 100%;
                 top: 1px;
-                transition: all 2s;
+                transition: all 2.8s;
             }
             .blob {
                 position: absolute;
@@ -70,25 +71,24 @@
                 width: 256px; height: 256px;
                 opacity: .32;
                 filter: blur( 12px );
+                top: 44px; right: 44px;
                 transition: all 2s;
             }
             .blob1 {
-                position: absolute;
                 background-color: #EDBA08;
-                top: 44px; right: 44px;
                 z-index: 248;
             }
             .blob2 {
-                position: absolute;
                 background-color: #DD4124;
-                top: 44px; right: 44px;
-                z-index: 249;
+                z-index: 246;
             }
             .blob3 {
-                position: absolute;
                 background-color: #F5DF4D;
-                top: 44px; right: 44px;
-                z-index: 250;
+                z-index: 249;
+            }
+            .blob4 {
+                background-color: #810000;
+                z-index: 245;
             }
         </style>
 <script>

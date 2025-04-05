@@ -24,12 +24,17 @@
         <neodigm-widget data-n55-widget-config="{conf:'', ampm:'',mobile:''}" data-n55-widget-id="effect_3d_spheres"></neodigm-widget>
         <section class="hero__cont">
             <img class="" src="img/a55_members_only_600.png" alt="Secure and Endure">
-            <div class="blob__cont">
-                <aside class="blob blob1"></aside>
-                <aside class="blob blob2"></aside>
-                <aside class="blob blob3"></aside>
-                <aside class="blob blob4"></aside>
-            </div>
+        <script>
+const effect_background_spotlight_danceCustom = {
+"Blobs": [
+    { "backgroundColor": "#915E00", "zIndex": 247 },
+    { "backgroundColor": "#DD4124", "zIndex": 248 },
+    { "backgroundColor": "#F5DF4D", "zIndex": 249 },
+    { "backgroundColor": "#edba08", "zIndex": 250 },
+]
+}
+        </script>
+        <neodigm-widget data-n55-widget-config="{conf:'', ampm:'',mobile:''}" data-n55-widget-id="effect_background_spotlight_dance"></neodigm-widget>        
         </section>
         <template style="text-align: center;">
             <br>
@@ -39,7 +44,6 @@
             <h3 class="h-three">Private Wealth Safe, Personal Security Stack, Digital Jump Bag, Hack-Proof Pocket Media, Portable and Secure, Waterproof and Hack-proof, Carabiner to Backpack, Extremely Reliable, One Password for Life.</h3>
             <h4 class="h-four">Arcanus 55 is the complete personal security stack. Your passwords and private documents are kept safe on a portable encrypted USB drive. A Waterproof Capsule shields your USB from physical damage. The Virtual Keyboard Chrome extension protects your information on bank, tax or shopping websites.</h4>
         </template>
-
         <neodigm-widget data-n55-widget-config="{conf:'', ampm:'',mobile:''}" data-n55-widget-id="contact_form_iframe_sfdc"></neodigm-widget>
         <style>
             /*  Overrides */
@@ -58,51 +62,9 @@
                 width: 100%;
                 z-index: 256;
             }
-            .blob__cont {
-                position: absolute;
-                transform: rotate(40deg);
-                width: 100%; height: 100%;
-                top: 1px;
-                transition: all 2.8s;
-            }
-            .blob {
-                position: absolute;
-                border-radius: 100%;
-                width: 256px; height: 256px;
-                opacity: .32;
-                filter: blur( 12px );
-                top: 44px; right: 44px;
-                transition: all 2s;
-            }
-            .blob1 {
-                background-color: #EDBA08;
-                z-index: 248;
-            }
-            .blob2 {
-                background-color: #DD4124;
-                z-index: 246;
-            }
-            .blob3 {
-                background-color: #F5DF4D;
-                z-index: 249;
-            }
-            .blob4 {
-                background-color: #810000;
-                z-index: 245;
-            }
         </style>
 <script>
-setInterval( ()=>{
-    let elPar = null
-    Array.from( document.querySelectorAll(".blob")).forEach( (el)=>{
-        if( neodigmUtils.f1210() >= 3 ){
-            elPar = el.parentNode
-            el.style.top = neodigmUtils.f02x(250) - 44 + "px"
-            el.style.right = neodigmUtils.f02x(250) - 44 + "px"
-        }
-    })
-    elPar.style.transform = `rotate(${ neodigmUtils.f02x(360) }deg)`
-}, 3e3)
+
 const contact_form_iframe_sfdcCustom = {"contact_cta_theme": ["danger"],"contact_cta_oid": ["00D6A000002intt"]}
 document.addEventListener("contextmenu", ( ev ) => {
     //if( !DebTog ){
